@@ -7,7 +7,7 @@ fractal.set("project.title", "Fractal Test");
 /*
  * Custom Twig settings
  */
-const twigAdapter = require('@frctl/twig')({ 
+const twigAdapter = require('@frctl/twig')({
     base: '/', //Require the Twig adapter and apply base location. Base will stop relative paths from being used
 });
 
@@ -20,6 +20,11 @@ fractal.components.set("ext", ".html.twig"); // Sets file extension used for pre
 fractal.components.set("path", __dirname + "/components"); // Sets path where components live
 fractal.components.set("default.preview", "@styleguide"); // Sets layout template used for rendering previews. Specified by handle
 fractal.components.set('exclude', ['**/node_modules/**', '**/tests/**']); //Exclude these files/folders from Fractal when parsing the components directory
+
+/*
+ * Setup build directory - For Static
+ */
+fractal.web.set('builder.dest', __dirname + '/build');
 
 /*
  * Documentation

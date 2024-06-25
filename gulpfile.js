@@ -9,13 +9,22 @@ const fs = require("fs");
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 
+// Build environments
+var environments = require('gulp-environments');
+// var development = environments.development;  //Use as `development()`
+var production = environments.production;       //Use as `production()`
+
+// Define Development and Production output folders
+const productionOutputDir = "build/";
+const developmentOutputDir = "public/";
+
+// Build output folders for JS and CSS
+const cssOutput = (production() ? productionOutputDir : developmentOutputDir) + "css/";
+const jsOutput = (production() ? productionOutputDir : developmentOutputDir) + "js/";
+
 // Build input folders
 const sassInput = "components/";
 const jsInput = "components/";
-// Build output folders
-const buildOutputDir = "public/";
-const cssOutput = buildOutputDir + "css/";
-const jsOutput = buildOutputDir + "js/";
 
 
 // Compiles SCSS into CSS then minifies it - command --> gulp sass

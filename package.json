@@ -12,8 +12,9 @@
         "postversion": "git push --tags origin develop && git checkout master && git pull --tags origin develop && git push --tags origin master && git checkout develop",
         "lint:scss": "stylelint --rd --rdd \"**/*.{css,scss,sass}\" -s scss",
         "fix:scss": "stylelint --rd --rdd \"**/*.{css,scss,sass}\" -s scss --fix",
-        "fractal:start": "gulp && fractal start --sync --watch",
-        "fractal:start-dev": "gulp && gulp watch && fractal start --sync --watch"
+        "fractal:start": "NODE_ENV=development gulp && fractal start --sync --watch",
+        "fractal:start-dev": "NODE_ENV=development gulp && gulp watch && fractal start --sync --watch",
+        "fractal:build": "fractal build && NODE_ENV=production gulp"
     },
     "engines": {
         "node": "lts/gallium"
@@ -27,6 +28,7 @@
         "gulp": "^4.0.2",
         "gulp-clean-css": "^4.3.0",
         "gulp-concat": "^2.6.1",
+        "gulp-environments": "^1.0.1",
         "gulp-postcss": "^9.0.1",
         "gulp-sass": "^5.1.0",
         "gulp-terser": "^2.1.0",
