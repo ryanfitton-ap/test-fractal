@@ -37,7 +37,7 @@
         "sass": "^1.77.6",
         "sass-loader": "^13.2.1",
         "style-loader": "^3.3.2",
-        "stylelint": "^16.6.1",
+        "stylelint": "^13.13.1",
         "webpack-stream": "^7.0.0"
     },
     "browserslist": [
