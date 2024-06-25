@@ -1,0 +1,11 @@
+@import 'components/button/button';
+
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    min-height: 1600px; //Add a min body height so small items such as the persistent nav can be tested
+}
