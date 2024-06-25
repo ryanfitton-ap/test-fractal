@@ -57,9 +57,9 @@ const css = () => {
 
 // Image modifications
 const images = () => {
-    return (production() ? src(imageInput + "**/*")
+    return src(imageInput + "**/*")
         //.pipe(imagemin()) //Disable Imagemin
-        .pipe(dest(imageOutput)) : false)
+        .pipe(dest(imageOutput))
 };
 
 /**
