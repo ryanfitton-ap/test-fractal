@@ -1,7 +1,7 @@
+build
 node_modules
 public/css/*
 public/js/*
-public/images/*
 .vscode/
 .DS_Store
 .settings

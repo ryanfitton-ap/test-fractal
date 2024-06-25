@@ -1,13 +1,14 @@
+build
 components/_styleguide.html.twig
 components/styleguide.scss
 fractal.config.js
+.github
 gulpfile.js
 .prettierignore
 .prettierrc
 .stylelintrc.yaml
 public/css/*
 public/js/*
-public/images/*
 .vscode/
 .settings
 *.cache
