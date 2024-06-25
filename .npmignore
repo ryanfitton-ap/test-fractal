@@ -9,7 +9,6 @@ gulpfile.js
 .stylelintrc.yaml
 public/css/*
 public/js/*
-public/images/*
 .vscode/
 .settings
 *.cache
