@@ -47,6 +47,20 @@ const mandelbrot = require("@frctl/mandelbrot");
 
 fractal.web.theme(
     mandelbrot({
+        information: [
+            {
+                label: 'Version',
+                value: require('./package.json').version,
+            },
+            {
+                label: 'Built on',
+                value: new Date(),
+                type: 'time', // Outputs a <time /> HTML tag
+                format: (value) => {
+                    return value.toLocaleDateString('en');
+                }
+            }
+        ],
         skin: {
             accent: "#213B70", // $blue
             complement: "#FFFFFF", // $white
