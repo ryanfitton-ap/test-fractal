@@ -1,0 +1,49 @@
+{
+    "name": "test-fractal",
+    "version": "0.0.0",
+    "description": "Fractal Test",
+    "private": true,
+    "workspaces": [
+        "components/*"
+    ],
+    "scripts": {
+        "preinstall": "node --version | grep -E '^v16' || (echo 'use Node Version 16 (Gallium): `nvm use lts/gallium`' && exit 1)",
+        "preversion": "git checkout develop",
+        "postversion": "git push --tags origin develop && git checkout master && git pull --tags origin develop && git push --tags origin master && git checkout develop",
+        "lint:scss": "stylelint --rd --rdd \"**/*.{css,scss,sass}\" -s scss",
+        "fix:scss": "stylelint --rd --rdd \"**/*.{css,scss,sass}\" -s scss --fix",
+        "fractal:start": "gulp && fractal start --sync --watch",
+        "fractal:start-dev": "gulp && gulp watch && fractal start --sync --watch"
+    },
+    "engines": {
+        "node": "lts/gallium"
+    },
+    "devDependencies": {
+        "@frctl/fractal": "^1.5.14",
+        "@frctl/mandelbrot": "^1.10.2",
+        "@frctl/twig": "^1.2.13",
+        "autoprefixer": "^10.4.13",
+        "css-loader": "^6.7.3",
+        "gulp": "^4.0.2",
+        "gulp-clean-css": "^4.3.0",
+        "gulp-concat": "^2.6.1",
+        "gulp-postcss": "^9.0.1",
+        "gulp-sass": "^5.1.0",
+        "gulp-terser": "^2.1.0",
+        "postcss": "^8.4.19",
+        "prettier": "2.7.1",
+        "sass-loader": "^13.2.1",
+        "style-loader": "^3.3.2",
+        "webpack-stream": "^7.0.0"
+    },
+    "browserslist": [
+        "ie 11",
+        "Chrome >= 74",
+        "last 3 major versions",
+        "Edge >= 85",
+        "iOS 12"
+    ],
+    "dependencies": {
+        "sass": "^1.77.6"
+    }
+}

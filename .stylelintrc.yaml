@@ -1,0 +1,4 @@
+ignoreFiles:
+  - "**/*.yaml"
+  - "**/*.yml"
+  - "**/*.css"

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>{{ _target.title }}</title>
+    <link rel="stylesheet" href="{{ '/css/styleguide.css'|path }}">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="module" src="{{ '/js/bundle.js'|path }}"></script>
+
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+</head>
+    {% block body %}
+        <body class="{{ body_class|default('styleguide') }}">
+            {% block yield %}
+                {{ yield }}
+            {% endblock %}
+        </body>
+    {% endblock %}
+</html>
