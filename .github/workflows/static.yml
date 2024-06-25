@@ -36,6 +36,9 @@ jobs:
         with:
           node-version-file: ".nvmrc"
 
+      - name: NPM Install `8.19.4` version which is compatiable with value in `.nvmrc`
+        run: npm install -g npm@8.19.4
+
       - name: Dump version
         run: |
           node -v
