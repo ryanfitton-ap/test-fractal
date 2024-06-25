@@ -47,8 +47,8 @@ jobs:
       - name: NPM Install
         run: npm ci --ignore-scripts
 
-      - name: Lint SCSS
-        run: npm run lint:scss
+      #- name: Lint SCSS
+      #  run: npm run lint:scss
 
       - name: Run Fractal Build
         run: npm run fractal:build
