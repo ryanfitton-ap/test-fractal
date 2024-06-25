@@ -32,9 +32,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      #- name: NPM Install `8.19.4` version which is compatiable with value in `.nvmrc`
-      #  run: npm install -g npm@8.19.4
-
       - uses: actions/setup-node@v4
         with:
           node-version-file: ".nvmrc"
