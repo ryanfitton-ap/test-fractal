@@ -37,6 +37,7 @@
         "prettier": "2.7.1",
         "sass": "^1.77.6",
         "sass-loader": "^13.2.1",
+        "staticrypt": "^3.5.0",
         "style-loader": "^3.3.2",
         "stylelint": "^13.13.1",
         "webpack-stream": "^7.0.0"

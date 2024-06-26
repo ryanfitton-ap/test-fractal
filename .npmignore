@@ -2,10 +2,12 @@ build
 components/_styleguide.html.twig
 components/styleguide.scss
 fractal.config.js
+.env
 .github
 gulpfile.js
 .prettierignore
 .prettierrc
+.staticrypt-template.html
 .stylelintrc.yaml
 public/css/*
 public/js/*
