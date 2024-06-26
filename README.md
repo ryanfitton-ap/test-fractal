@@ -16,6 +16,8 @@
 
 Using [staticrypt](https://github.com/robinmoisson/staticrypt). StatiCrypt uses AES-256 and WebCrypto to encrypt HTML files and provides a login page.
 
+Password for this repo is `$eG%7qey`
+
 A couple of changes made in this repo:
 
 * Login page (`./staticrypt-template.html`). Forked from the [origina](https://raw.githubusercontent.com/robinmoisson/staticrypt/main/lib/password_template.html).

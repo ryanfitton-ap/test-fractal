@@ -53,7 +53,7 @@ jobs:
       - name: Run Fractal Build
         run: npm run fractal:build
 
-      - name: Protect the build
+      - name: Protect the Build
         run: |
           npx staticrypt \
             --short  \
