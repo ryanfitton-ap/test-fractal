@@ -53,6 +53,21 @@ jobs:
       - name: Run Fractal Build
         run: npm run fractal:build
 
+      - name: Protect the Build
+        run: |
+          npx staticrypt \
+            --short  \
+            --salt 12345678901234567890123456789012 \
+            -t ./staticrypt-template.html \
+            --template-color-primary "#9c0067" \
+            --template-color-secondary "#213B70" \
+            --template-title "test-fractal" \
+            --template-instructions "This page is password protected" \
+            --template-error "Incorrect password" \
+            --is-remember-enabled "1" \
+            --template-remember-value "1" \
+            ./build/* -r -d ./build
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
