@@ -2,7 +2,6 @@ build
 components/_styleguide.html.twig
 components/styleguide.scss
 fractal.config.js
-.env
 .github
 gulpfile.js
 .prettierignore
