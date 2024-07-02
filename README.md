@@ -18,6 +18,9 @@ Using [staticrypt](https://github.com/robinmoisson/staticrypt). StatiCrypt uses 
 
 Password for this repo is `$eG%7qey`
 
+* Github CI Worfklow: The password is stored as a variable named `STATICRYPT_PASSWORD`. This can be configured in (`Settings` > `Security` > `Actions` > `Secrets` tab). This variable is injected into the Github Actions workflow script.
+* If you alternatively require a password to be set via a different method, create a `.env` file in the root of this repo, with the contents: `STATICRYPT_PASSWORD=$eG%7qey`
+
 A couple of changes made in this repo:
 
 * Login page (`./staticrypt-template.html`). Forked from the [origina](https://raw.githubusercontent.com/robinmoisson/staticrypt/main/lib/password_template.html).

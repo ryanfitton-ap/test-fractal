@@ -67,6 +67,8 @@ jobs:
             --is-remember-enabled "1" \
             --template-remember-value "1" \
             ./build/* -r -d ./build
+        env:
+          STATICRYPT_PASSWORD: ${{ secrets.STATICRYPT_PASSWORD }}
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
